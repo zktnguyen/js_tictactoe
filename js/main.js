@@ -7,7 +7,7 @@ function startGame() {
     document.getElementById("start").style.visiblity = 'hidden';
 
     if (document.getElementById("start").innerHTML === "START") {
-        document.getElementById("start").style.width = "50px";
+        document.getElementById("start").style.width = "100px";
         document.getElementById("start").innerHTML = "RESTART";
     }
 
