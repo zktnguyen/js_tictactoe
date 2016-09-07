@@ -31,25 +31,24 @@ function makeMove(num){
             but.style.opacity = 1;
             but.style.backgroundImage = "url('./img/x.png')";
             but.disabled = true;
+            placed[num] = player1;
         }
         else {
             console.log("I will place O on box " + num);
             but.style.opacity = 1;
             but.style.backgroundImage = "url('./img/o.png')";
             but.disabled = true;
+            placed[num] = player2;
         }
         turn++;
+        checkWinner(placed[num]);
+
     }
 
     else {
         alert("Please choose another box.");
     }
 
-    if (turn === 9){
-        checkWinner(player1);
-        checkWinner(player2);
-
-    }
 
 }
 
@@ -69,6 +68,22 @@ function checkWinner(player){
         var b = winningCombo[i][1];
         var c = winningCombo[i][2];
 
-       // if (player === ){}
+       if ((player === placed[a] &&
+           player === placed[b] &&
+           player === placed[c]) || turn === 9){
+           console.log("Game Over");
+           clearGame();
+       }
+
     }
+}
+
+function clearGame(){
+    for (var i = 0; i < 9; i++){
+        document.getElementById("box"+i).disabled = true;
+    }
+
+    setInterval(function(){alert("Game is over! Page will reload.");}, 1000);
+    setInterval(function(){ location.reload();}, 5000);
+
 }
