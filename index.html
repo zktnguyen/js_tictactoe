@@ -2,35 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tic Tac Toe</title>
-
+    <title>Tic Tac Toe!</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="js/game.js" ></script>
 </head>
 <body>
     <div class="container">
-        <h1>Tic Tac Toe</h1>
-        <button id="start" onclick="choosePlayerX();">START</button>
-        <div class="game">
-            <table class="topRow" border="1">
+        <h1>TIC TAC TOE</h1>
+        <button id="start" onclick="beginGame();">START GAME</button>
+        <div class="game-area">
+            <table id="game" height="300" width="300">
                 <tr>
-                    <td>
-                        <button type="button" id="button1" onclick="" disabled></button>
-                    </td>
-                    <td>
-                        <button type="button" id="button2" onclick="" disabled></button>
-                    </td>
-                    <td>
-                        <button type="button" id="button3" onclick="" disabled></button>
-                    </td>
+                    <td id="cell0"><button id="box0" onclick="makeMove(0);"></button></td>
+                    <td id="cell1"><button id="box1" onclick="makeMove(1);"></button></td>
+                    <td id="cell2"><button id="box2" onclick="makeMove(2);"></button></td>
                 </tr>
                 <tr>
-                    <td>
-                        <button type="button" id="button4" onclick="" disabled></button>
-                    </td>
-
+                    <td id="cell3"><button id="box3" onclick="makeMove(3);"></button></td>
+                    <td id="cell4"><button id="box4" onclick="makeMove(4);"></button></td>
+                    <td id="cell5"><button id="box5" onclick="makeMove(5);"></button></td>
+                </tr>
+                <tr>
+                    <td id="cell6"><button id="box6" onclick="makeMove(6);"></button></td>
+                    <td id="cell7"><button id="box7" onclick="makeMove(7);"></button></td>
+                    <td id="cell8"><button id="box8" onclick="makeMove(8);"></button></td>
                 </tr>
             </table>
-
         </div>
+
     </div>
 </body>
 </html>
