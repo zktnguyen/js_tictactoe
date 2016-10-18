@@ -52,9 +52,6 @@ function makeMove(num){
 
 }
 
-
-
-
 function checkWinner(player){
     // horizontal -> diagonal -> vertical
     var winningCombo = [[0,1,2],[3,4,5],[6,7,8],
@@ -72,16 +69,18 @@ function checkWinner(player){
            player === placed[b] &&
            player === placed[c]) || turn === 9){
            console.log("Game Over");
-           clearGame();
+           clearGame(player);
        }
 
     }
 }
 
-function clearGame(){
+function clearGame(player){
     for (var i = 0; i < 9; i++){
         document.getElementById("box"+i).disabled = true;
     }
+    document.getElementById("game").style.visibility = 'hidden';
+
 
     setInterval(function(){alert("Game is over! Page will reload.");}, 1000);
     setInterval(function(){ location.reload();}, 5000);
