@@ -67,9 +67,13 @@ function checkWinner(player){
 
        if ((player === placed[a] &&
            player === placed[b] &&
-           player === placed[c]) || turn === 9){
+           player === placed[c])){
            console.log("Game Over");
            clearGame(player);
+       }
+
+        else if (turn === 9){
+           clearGame("neither");
        }
 
     }
@@ -79,10 +83,16 @@ function clearGame(player){
     for (var i = 0; i < 9; i++){
         document.getElementById("box"+i).disabled = true;
     }
-    document.getElementById("game").style.visibility = 'hidden';
 
 
-    setInterval(function(){alert("Game is over! Page will reload.");}, 1000);
-    setInterval(function(){ location.reload();}, 5000);
+    setInterval(function(){document.getElementById("game").style.visibility = 'hidden';}, 500);
+    var newGame = document.createElement("button");
+    var t = document.createTextNode("New Game, winner was "+player);
+    newGame.appendChild(t);
+    document.body.appendChild(newGame);
+    newGame.onclick = function(){
+        location.reload();
+    };
+
 
 }
