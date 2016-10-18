@@ -67,9 +67,13 @@ function checkWinner(player){
 
        if ((player === placed[a] &&
            player === placed[b] &&
-           player === placed[c]) || turn === 9){
+           player === placed[c])){
            console.log("Game Over");
            clearGame(player);
+       }
+
+        else if (turn === 9){
+           clearGame("neither");
        }
 
     }
@@ -86,8 +90,8 @@ function clearGame(player){
     var t = document.createTextNode("New Game, winner was "+player);
     newGame.appendChild(t);
     document.body.appendChild(newGame);
-    document.getElementById('button').onclick = function(){
-        setInterval(function(){ location.reload();}, 5000);
+    newGame.onclick = function(){
+        location.reload();
     };
 
 

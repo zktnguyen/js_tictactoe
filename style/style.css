@@ -55,58 +55,68 @@ button#start {
 
 }
 
-button#box0 {
+button {
+    border: 1px solid #000;
+    color: black;
+    font-family: Arial;
+    font-weight: 700;
+    width: 150px;
     height: 100px;
-    width: 100px;
+    top: 5; left: 0; right: 0; bottom: 5;
+    margin: auto;
+}
+button#box0 {
+    height: 193px;
+    width: 193px;
     opacity: 0;
 }
 
 
 button#box1 {
-    height: 100px;
-    width: 100px;
+    height: 193px;
+    width: 193px;
     opacity: 0;
 }
 
 button#box2 {
-    height: 100px;
-    width: 100px;
+    height: 193px;
+    width: 193px;
     opacity: 0;
 }
 
 button#box3 {
-    height: 100px;
-    width: 100px;
+    height: 193px;
+    width: 193px;
     opacity: 0;
 }
 
 button#box4 {
-    height: 100px;
-    width: 100px;
+    height: 193px;
+    width: 193px;
     opacity: 0;
 }
 
 button#box5 {
-    height: 100px;
-    width: 100px;
+    height: 193px;
+    width: 193px;
     opacity: 0;
 }
 
 button#box6 {
-    height: 100px;
-    width: 100px;
+    height: 193px;
+    width: 193px;
     opacity: 0;
 }
 
 button#box7 {
-    height: 100px;
-    width: 100px;
+    height: 193px;
+    width: 193px;
     opacity: 0;
 }
 
 button#box8 {
-    height: 100px;
-    width: 100px;
+    height: 193px;
+    width: 193px;
     opacity: 0;
 }
 
