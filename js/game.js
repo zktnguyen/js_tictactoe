@@ -79,10 +79,16 @@ function clearGame(player){
     for (var i = 0; i < 9; i++){
         document.getElementById("box"+i).disabled = true;
     }
-    document.getElementById("game").style.visibility = 'hidden';
 
 
-    setInterval(function(){alert("Game is over! Page will reload.");}, 1000);
-    setInterval(function(){ location.reload();}, 5000);
+    setInterval(function(){document.getElementById("game").style.visibility = 'hidden';}, 500);
+    var newGame = document.createElement("button");
+    var t = document.createTextNode("New Game, winner was "+player);
+    newGame.appendChild(t);
+    document.body.appendChild(newGame);
+    document.getElementById('button').onclick = function(){
+        setInterval(function(){ location.reload();}, 5000);
+    };
+
 
 }
