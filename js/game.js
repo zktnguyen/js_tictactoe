@@ -85,7 +85,7 @@ function clearGame(player){
     }
 
 
-    setInterval(function(){document.getElementById("game").style.visibility = 'hidden';}, 500);
+    setInterval(function(){document.getElementById("game").style.visibility = 'hidden';}, 2000);
     var newGame = document.createElement("button");
     var t = document.createTextNode("New Game, winner was "+player);
     newGame.appendChild(t);
