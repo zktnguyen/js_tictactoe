@@ -1,35 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
-    <meta charset="UTF-8">
-    <title>Tic Tac Toe!</title>
-    <link rel="stylesheet" type="text/css" href="style/style.css">
-    <script src="js/game.js" ></script>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
 </head>
+
 <body>
-    <div class="container">
-        <h1>TIC TAC TOE</h1>
-        <button id="start" onclick="beginGame();">START GAME</button>
-        <div class="game-area">
-            <table id="game" height="300" width="300">
-                <tr>
-                    <td id="cell0"><button id="box0" onclick="makeMove(0);"></button></td>
-                    <td id="cell1"><button id="box1" onclick="makeMove(1);"></button></td>
-                    <td id="cell2"><button id="box2" onclick="makeMove(2);"></button></td>
-                </tr>
-                <tr>
-                    <td id="cell3"><button id="box3" onclick="makeMove(3);"></button></td>
-                    <td id="cell4"><button id="box4" onclick="makeMove(4);"></button></td>
-                    <td id="cell5"><button id="box5" onclick="makeMove(5);"></button></td>
-                </tr>
-                <tr>
-                    <td id="cell6"><button id="box6" onclick="makeMove(6);"></button></td>
-                    <td id="cell7"><button id="box7" onclick="makeMove(7);"></button></td>
-                    <td id="cell8"><button id="box8" onclick="makeMove(8);"></button></td>
-                </tr>
-            </table>
+  <div class="container">
+  <h1>Tic Tac Toe</h1>
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Choose your player</h3>
+        <div class="checkbox-inline">
+          <label><input type="checkbox" id="player-x" value="x">X</label>
+        </div>
+        <div class="checkbox-inline">
+          <label><input type="checkbox" id="player-o" value="o">O</label>
+        </div>
+        <h3>List of winners</h3>
+        <ul id="list-winners">
+        </ul>
+      </div>
+      <div class="col-md-8 ttt-grid">
+        <div class="box-row">
+          <div class="box box-left box-top" id="box-0-0">&nbsp;</div>
+          <div class="box box-top" id="box-0-1">&nbsp;</div>
+          <div class="box box-top box-right" id="box-0-2">&nbsp;</div>
+        </div>
+        <div class="box-row">
+          <div class="box box-left" id="box-1-0">&nbsp;</div>
+          <div class="box" id="box-1-1">&nbsp;</div>
+          <div class="box box-right" id="box-1-2">&nbsp;</div>
+        </div>
+        <div class="box-row">
+          <div class="box box-left box-bottom" id="box-2-0">&nbsp;</div>
+          <div class="box box-bottom" id="box-2-1">&nbsp;</div>
+          <div class="box box-right box-bottom" id="box-2-2">&nbsp;</div>
         </div>
 
+      </div>
     </div>
+    
+  </div>
+  
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src="js/script.js"></script>
+  
 </body>
 </html>
