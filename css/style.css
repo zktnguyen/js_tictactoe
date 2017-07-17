@@ -1,0 +1,76 @@
+html, body {
+  height: 100%;
+  min-height: 100%;
+  background-color: black;
+  color: white;
+}
+
+.jumbotron {
+  color: black;
+}
+
+.ttt-grid {
+  display: block;
+  text-align: center;
+}
+
+.box-row {
+  display: block;
+}
+
+.box {
+  padding: 35px;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  color: black;
+  font-size: 5.0em;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.box-top {
+  border-top: none;
+}
+
+.box-left {
+  border-left: none;
+}
+
+.box-right {
+  border-right: none;
+}
+
+.box-bottom {
+  border-bottom: none;
+}
+
+.winner-text {
+  color: green;
+  font-weight: bold;
+}
+
+.loser-text {
+  color: red;
+  font-weight: bold;
+}
+
+#list-winners li {
+  list-style: none;
+}
+
+.computer-text {
+  color: red;
+  font-weight: bold;
+}
+
+.your-text {
+  color: green;
+  font-weight: bold;
+}
+
+.tie-text {
+  color: blue;
+  font-weight: bold;
+}
