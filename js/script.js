@@ -34,7 +34,11 @@
       for (var i = 0; i < 9; i++){
         placed[i] = " ";
       }
-      turn = 0;
+      turn = 0; 
+      currentPlayer = (Math.random() * 2).toFixed() === 1 ? computerPlayer : myPlayer;
+      if (currentPlayer === computerPlayer){
+        makeAIMove();
+      }
     }
 
     playerX.click(function(){
@@ -70,6 +74,7 @@
       yourID.html("You are O");
       computerID.html("Computer is X");
     });
+    
     function checkWinner(player) {
       var winningCombo = [
         [0,1,2],[3,4,5],[6,7,8],
@@ -98,24 +103,43 @@
 
       }
     }
+
+    function makeAIMove() {
+      var boxTaken = false;
+      while (!boxTaken && turn !== 9){
+        var AI = (Math.random() * 10).toFixed();
+        var box = $("#box" + AI);
+        if (box.html() === "&nbsp;"){
+          placed[AI] = computerPlayer;
+          box.html(computerPlayer);
+          boxTaken = true;
+        }
+      }
+      currentPlayer = myPlayer;
+      turn++;
+      checkWinner(computerPlayer);
+    }
+
     function makeMove(player, boxNum) {
       var box = $("#box"+ boxNum);
       if (box.html() === "&nbsp;"){
         box.html(player);
         placed[boxNum] = player;
         turn++;
-        currentPlayer = currentPlayer === "O" ? "X" : "O";
+        currentPlayer = computerPlayer;
         checkWinner(placed[boxNum]);
+        if (turn < 9){
+          makeAIMove();
+        }
       }
       else {
         console.log("Please select another box");
       }
-
     } 
 
     allBoxes.click(function(){
       var boxNum = $(this).attr('id').charAt(3);
-      makeMove(currentPlayer, boxNum);
+      makeMove(myPlayer, boxNum);
 
     });
   });
