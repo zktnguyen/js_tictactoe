@@ -13,6 +13,7 @@ html, body {
   display: block;
   text-align: center;
 }
+
 .box-row {
   display: block;
 }
@@ -25,6 +26,7 @@ html, body {
   border: 1px solid black;
   color: black;
   font-size: 5.0em;
+  box-sizing: border-box;
   cursor: pointer;
 }
 
@@ -64,7 +66,7 @@ html, body {
 }
 
 .your-text {
-  color: blue;
+  color: green;
   font-weight: bold;
 }
 

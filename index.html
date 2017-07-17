@@ -6,8 +6,7 @@
   
   
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-
-      <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
   
 </head>
@@ -16,43 +15,41 @@
   <div class="container">
   <h1>Tic Tac Toe</h1>
   <div class="jumbotron">
+    <div class="player-id">
+      <h2 class="your-text" id="your-id">You are X</h2>
+      <h2 class="computer-text" id="computer-id">Computer is O</h2>
+    </div>
     <div class="row">
       <div class="col-md-4">
         <h3>Choose your player</h3>
-        <div class="checkbox-inline">
-          <label><input type="checkbox" id="player-x" value="x">X</label>
-        </div>
-        <div class="checkbox-inline">
-          <label><input type="checkbox" id="player-o" value="o">O</label>
-        </div>
+        <button class="btn btn-success" id="playerX">X</button>
+        <button class="btn btn-danger" id="playerO">O</button>
         <h3>List of winners</h3>
         <ul id="list-winners">
         </ul>
       </div>
       <div class="col-md-8 ttt-grid">
         <div class="box-row">
-          <div class="box box-left box-top" id="box-0-0">&nbsp;</div>
-          <div class="box box-top" id="box-0-1">&nbsp;</div>
-          <div class="box box-top box-right" id="box-0-2">&nbsp;</div>
+          <div class="box btn btn-default" id="box-0-0">&nbsp;</div>
+          <div class="box btn btn-default" id="box-0-1">&nbsp;</div>
+          <div class="box btn btn-default" id="box-0-2">&nbsp;</div>
         </div>
         <div class="box-row">
-          <div class="box box-left" id="box-1-0">&nbsp;</div>
-          <div class="box" id="box-1-1">&nbsp;</div>
-          <div class="box box-right" id="box-1-2">&nbsp;</div>
+          <div class="box btn btn-default" id="box-1-0">&nbsp;</div>
+          <div class="box btn btn-default" id="box-1-1">&nbsp;</div>
+          <div class="box btn btn-default" id="box-1-2">&nbsp;</div>
         </div>
         <div class="box-row">
-          <div class="box box-left box-bottom" id="box-2-0">&nbsp;</div>
-          <div class="box box-bottom" id="box-2-1">&nbsp;</div>
-          <div class="box box-right box-bottom" id="box-2-2">&nbsp;</div>
+          <div class="box btn btn-default" id="box-2-0">&nbsp;</div>
+          <div class="box btn btn-default" id="box-2-1">&nbsp;</div>
+          <div class="box btn btn-default" id="box-2-2">&nbsp;</div>
         </div>
 
       </div>
     </div>
-    
   </div>
-  
 </div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
 <script src="js/script.js"></script>
   
